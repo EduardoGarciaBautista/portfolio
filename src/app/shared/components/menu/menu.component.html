@@ -1,0 +1,19 @@
+<div class="menu-container">
+    <i class="fas fa-bars menu__button" (click)="isMenuOpen = !isMenuOpen"></i>
+    <div class="menu__actions" [ngClass]="{'open-menu-animation': isMenuOpen}">
+        <button>
+            <i class="fas fa-blog blog"></i>
+            Blog
+        </button>
+        <button>
+            <i class="fas fa-address-book contact"></i>
+            Contact
+        </button>
+
+        <button>
+            <i class="fas fa-graduation-cap"></i>
+            Certifications
+        </button>
+
+    </div>
+</div>

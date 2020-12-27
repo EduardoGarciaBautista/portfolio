@@ -1,0 +1,241 @@
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 120px 50px 70px 70px;
+  grid-template-areas:
+  "menu menu"
+  "photo name"
+  "photo secondary-info"
+  "photo know-me"
+  "photo social-media";
+}
+
+.menu {
+  grid-area: menu;
+  overflow: hidden;
+}
+
+.photo {
+  grid-area: photo;
+  @include flex-top($row);
+  justify-content: center;
+  position: relative;
+}
+
+.photo img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  z-index: 10;
+  border: 5px solid #ec9b3b;
+  cursor: pointer;
+  position: absolute;
+
+}
+
+.feat {
+  border-radius: 50%;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transition: 2s;
+
+  &:hover {
+    @include generateCircles(7, 200);
+  }
+}
+
+.profile-technology {
+  width: 40px;
+  height: 40px;
+  @include flex-center();
+  border-radius: 50%;
+  transition: 300ms;
+  opacity: 0;
+  position: absolute;
+  left: calc(50% - 15px);
+  right: calc(50% - 15px);
+  top: calc(50% - 15px);
+  bottom: calc(50% - 15px);
+  cursor: pointer;
+  span {
+    transition: 300ms;
+    display: none;
+    opacity: 0;
+  }
+
+  &:hover {
+    z-index: 1000!important;
+    span {
+      display: initial;
+      margin: 0;
+      @include flex-center();
+      position: absolute;
+      font-size: 14px;
+      transform: translateX(50px);
+      border-radius: 30px;
+      padding: 3px;
+      background-color: rgba(0, 0, 0, .5);
+      opacity: 1;
+      z-index: 1000;
+    }
+  }
+
+  i {
+    font-size: 25px;
+  }
+}
+
+
+.photo-shadow {
+  transition: 300ms;
+  transition-delay: 1ms;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  left: 20%;
+  bottom: 15%;
+  border: 5px solid #ec9b3b;
+  cursor: pointer;
+  @include flex-center();
+}
+
+
+.name {
+  grid-area: name;
+  @include flex-top($column);
+  overflow: hidden;
+}
+
+.name span:first-child {
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.name span:last-child {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.secondary-info {
+  grid-area: secondary-info;
+}
+
+.secondary-info span {
+  font-size: 20px;
+}
+
+.know-me {
+  grid-area: know-me;
+}
+
+.know-me button {
+  height: 45px;
+  background-color: #3fc5f0;
+  width: 250px;
+  border: 0;
+  border-radius: 30px;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  outline: none;
+}
+
+.social-media {
+  grid-area: social-media;
+  @include flex-start();
+  align-items: start;
+}
+
+.social-media span {
+  @include flex-center();
+}
+
+#linkedin, #github {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.info-container-item {
+  color: white;
+}
+
+
+/* escritorio normales */
+@media (max-width: 992px) {
+  .name span:first-child {
+    font-size: 30px;
+  }
+
+  .name span:last-child {
+    font-size: 40px;
+  }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .photo img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    z-index: 10;
+    border: 5px solid #ec9b3b;
+  }
+
+  .photo-shadow {
+    height: 130px;
+    width: 130px;
+    bottom: 20%;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .name span:first-child {
+    font-size: 20px;
+  }
+
+  .name span:last-child {
+    font-size: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  .photo-shadow {
+    display: none;
+  }
+  .know-me button {
+    height: 30px;
+    font-size: 15px;
+  }
+  .name, .secondary-info, .know-me, .social-media {
+    @include flex-center()
+  }
+  .feat {
+    width: 160px;
+    height: 160px;
+
+    &:hover {
+      @include generateCircles(7, 160);
+    }
+  }
+
+  .info-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 160px 60px 40px 40px 50px;
+    grid-template-areas:
+  "menu"
+  "photo"
+  "name"
+  "secondary-info"
+  "know-me"
+  "social-media";
+  }
+}

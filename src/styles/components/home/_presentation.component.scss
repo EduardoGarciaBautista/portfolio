@@ -1,0 +1,75 @@
+.layout-container {
+  display: grid;
+  grid-template-columns: 15% repeat(2, 1fr) 15%;
+  grid-template-rows: 50px 400px 1fr;
+  grid-template-areas:
+          "sr-left top top sr-right"
+          "sr-left middle middle sr-right"
+          "sr-left bottom bottom sr-right";
+  background-color: #14274e;
+  color: white;
+}
+
+.item {
+}
+
+.side-left {
+  grid-area: sr-left;
+}
+
+.top {
+  grid-area: top;
+}
+
+.side-right {
+  grid-area: sr-right;
+}
+
+.middle {
+  grid-area: middle;
+  background: url($banner) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.card {
+  grid-area: card;
+}
+
+.bottom {
+  grid-area: bottom;
+  background-color: white;
+}
+
+.card-over {
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .layout-container {
+    grid-template-columns: 15% repeat(2, 1fr);
+    grid-template-rows: 50px 400px 1fr;
+    grid-template-areas:
+          "sr-left top top "
+          "sr-left middle middle"
+          "sr-left bottom bottom"
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  .side-left, .side-right {
+    display: none;
+  }
+  .layout-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 400px 1fr;
+    grid-template-areas:
+          "top "
+          "middle"
+          "bottom"
+  }
+}

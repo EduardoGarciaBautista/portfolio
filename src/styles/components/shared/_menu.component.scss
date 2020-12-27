@@ -1,0 +1,40 @@
+.menu-container {
+  height: 100%;
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  padding: 0 2%;
+  transition: 300ms;
+}
+
+.menu__actions {
+  animation: menuAnimationRight 300ms forwards;
+}
+
+.menu__button {
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  color: #ff4301;
+}
+.open-menu-animation {
+  animation: menuAnimationNormal 300ms forwards;
+}
+
+.menu-container button {
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  color: white;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.blog {
+  color: #f37121;
+}
+
+.contact {
+  color: #c0e218;
+}

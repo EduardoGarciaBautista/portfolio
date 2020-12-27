@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+$banner: 'https://firebasestorage.googleapis.com/v0/b/portfolio-ed.appspot.com/o/images%2Fbanner2.jpg?alt=media&token=af028443-36cc-4153-a387-cfa9f598f799';
+
+$column: 'column';
+$row: 'row';
+
+$center: 'center';
+$start: 'start';
+$end: 'end';
+
+@mixin flex($direction: $row) {
+  display: flex;
+  @if ($direction == $column) {
+    flex-direction: column;
+  }
+}
+
+@mixin flex-top($direction: $row) {
+  @include flex($direction);
+  @if ($direction == $row) {
+    align-items: start;
+  } @else {
+    justify-content: flex-start;
+  }
+}
+
+
+@mixin flex-bottom($direction: $row) {
+  @include flex($direction);
+  @if ($direction == $row) {
+    align-items: end;
+  } @else {
+    justify-content: flex-end;
+  }
+}
+
+@mixin flex-start($direction: $row) {
+  @include flex($direction);
+
+  @if ($direction == $row) {
+    justify-content: flex-start;
+  } @else {
+    align-items: start;
+  }
+}
+
+@mixin flex-end($direction: $row) {
+  @include flex($direction);
+
+  @if ($direction == $row) {
+    justify-content: flex-end;
+  } @else {
+    align-items: end;
+  }
+}
+
+@mixin flex-center($direction: $row) {
+  @include flex($direction);
+  align-items: center;
+
+  @if ($direction == $row) {
+    justify-content: center;
+  } @else {
+    align-items: center;
+  }
+}
+
+
+@mixin generateCircles($items, $radius) {
+  $move: 360 /$items;
+
+  $accumulatorX: $move;
+
+  @for $i from 0 through $items {
+    .profile-technology:nth-of-type(#{$i}) {
+      transform: rotate(#{$accumulatorX}deg) translateX(#{$radius/2}px) rotate(#{-$accumulatorX}deg);
+      opacity: 1;
+      z-index: 100;
+    }
+    $accumulatorX: $accumulatorX  + $move;
+  }
+}
+
+
+@mixin arrow() {
+  content: ' ';
+  height: 3px;
+  width: 3px;
+  position: absolute;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  transform: rotate(-45deg);
+  right: -20px;
+}
+
+@keyframes  menuAnimationRight {
+  to {
+    transform: translateX(500px);
+  }
+}
+@keyframes  menuAnimationNormal {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}

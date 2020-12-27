@@ -1,0 +1,16 @@
+<div class="carousel-container">
+    <div class="carousel-card" *ngFor="let card of cards">
+        <div class="card-cover-page" [style]="{'background-color': card.headerColor}">
+        </div>
+        <img [src]="card.img" alt="logo">
+        <div class="card-content">
+            <span class="card-content__project">
+                {{card.projectName}}
+            </span>
+            <a class="card-content__url" [href]="card.url">Url website</a>
+            <button class="card-content__know">
+                Know more
+            </button>
+        </div>
+    </div>
+</div>

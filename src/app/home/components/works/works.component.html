@@ -1,0 +1,16 @@
+<div class="work-container">
+    <div class="work-content">
+        <div class="work-title">
+            <div class="space"></div>
+            <p>
+                I have <span class="word-work">worked</span> as <span>Front End Developer</span>
+            </p>
+            <span *ngFor="let word of works" [style]="{'color': word.color}" [ngClass]="{'word-border': word.border}">
+                  {{word.label}}
+            </span>
+        </div>
+        <div class="work-carousel">
+            <app-carousel></app-carousel>
+        </div>
+    </div>
+</div>
