@@ -7,7 +7,13 @@
             <span class="card-content__project">
                 {{card.projectName}}
             </span>
-            <a class="card-content__url" [href]="card.url">Url website</a>
+            <div class="badges">
+                <span *ngFor="let badge of card.badges">
+                    <i [ngClass]="badge.icon" *ngIf="badge.icon"></i>
+                    {{badge.label}}
+                </span>
+            </div>
+            <a class="card-content__url" *ngIf="card.url" [href]="card.url" target="_blank">Url website</a>
             <button class="card-content__know">
                 Know more
             </button>

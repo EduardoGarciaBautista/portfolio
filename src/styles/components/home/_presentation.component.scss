@@ -6,7 +6,8 @@
           "sr-left top top sr-right"
           "sr-left middle middle sr-right"
           "sr-left bottom bottom sr-right";
-  background-color: #14274e;
+  //background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
+  background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
   color: white;
 }
 
@@ -19,6 +20,7 @@
 
 .top {
   grid-area: top;
+  overflow: hidden;
 }
 
 .side-right {

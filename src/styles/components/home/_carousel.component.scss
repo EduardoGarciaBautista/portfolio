@@ -22,6 +22,7 @@
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   position: relative;
+  border: 1px solid #3fc5f0;
 
   display: flex;
   flex-direction: column;
@@ -46,7 +47,7 @@
   object-fit: contain;
   object-position: center;
   border-radius: 50%;
-  border: 4px solid white;
+  border: 2px solid gray;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ;
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ;
   -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ;
@@ -59,11 +60,12 @@
 
 .card-content {
   height: 230px;
-  padding-top: 50px;
+  padding: 30px 20px 0 20px;
+  border-top: 2px solid gray;
   box-sizing: border-box;
-
   @include flex-center($column);
   justify-content: space-evenly;
+  width: 100%;
 }
 
 .card-content__project {
@@ -71,6 +73,27 @@
   font-size: 25px;
   font-weight: bold;
   border-bottom: 2px solid #d3f6f3;
+}
+
+.badges {
+  color: black;
+  @include flex-center();
+  width: 100%;
+  flex-wrap: wrap;
+  span {
+    @include flex-center();
+    background-color: #4285f4;
+    border-radius: 30px;
+    margin-right: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 14px;
+  }
+  i {
+    color: #ffc93c;
+    margin-right: 4px;
+  }
 }
 
 .card-content__url {

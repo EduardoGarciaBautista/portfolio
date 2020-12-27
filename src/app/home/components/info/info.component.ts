@@ -6,7 +6,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
-    avatar = 'https://firebasestorage.googleapis.com/v0/b/portfolio-ed.appspot.com/o/images%2Favatar.webp?alt=media&token=593d9f2f-b5b2-4bd8-91f5-d2fe9ab0040f';
+    avatar = 'https://firebasestorage.googleapis.com/v0/b/portfolio-ed.appspot.com/o/images%2FIMG_20200917_092733_2.jpg?alt=media&token=957b87b5-d4ad-4915-b908-dee36305eaca';
 
     technologies = [
         {

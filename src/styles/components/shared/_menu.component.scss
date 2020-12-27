@@ -8,7 +8,12 @@
 }
 
 .menu__actions {
-  animation: menuAnimationRight 300ms forwards;
+  transform: translateX(500px);
+  animation: menuAnimationNormal 300ms 1s forwards;
+}
+
+.close-button {
+  opacity: 0;
 }
 
 .menu__button {
@@ -17,9 +22,8 @@
   cursor: pointer;
   color: #ff4301;
 }
-.open-menu-animation {
-  animation: menuAnimationNormal 300ms forwards;
-}
+
+
 
 .menu-container button {
   background-color: transparent;
@@ -29,6 +33,7 @@
   color: white;
   padding: 0 10px;
   cursor: pointer;
+  outline: none;
 }
 
 .blog {
@@ -36,5 +41,61 @@
 }
 
 .contact {
-  color: #c0e218;
+  color: #999b84;
+}
+
+.certification {
+  color: #e6b566;
+}
+
+
+@media only screen and (max-width: 640px) {
+
+  .close-button {
+    opacity: 1;
+    right: 7%;
+    top: 2%;
+    position: absolute;
+    font-size: 30px;
+    color: #ff4301;
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+  }
+  .open-menu-animation, .menu__actions {
+    animation: unset;
+    opacity: 0;
+  }
+  .menu__actions.open-menu-animation {
+    transform: translateX(0px);
+    z-index: 1000;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+    background-color: #282828;
+    background-size: 16px 16px;
+
+    width: 100%;
+    opacity: 1;
+    padding-top: 30px;
+
+    button {
+      position: relative;
+      display: block;
+      margin: 15px 0;
+      width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #555555;
+      border-bottom-left-radius: 20%;
+      border-bottom-right-radius: 20%;
+    }
+  }
 }
