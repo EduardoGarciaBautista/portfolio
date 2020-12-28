@@ -1,0 +1,8 @@
+<div class="loader-wrapper">
+    <div class="loading-animated" [ngClass]="{'ready': !loadingProfile && !loadingProjects}">
+        Cargando..
+    </div>
+    <div class="loader-container" [ngClass]="{'animate': !loadingProfile && !loadingProjects}">
+        <ng-content></ng-content>
+    </div>
+</div>

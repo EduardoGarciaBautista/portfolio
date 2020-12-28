@@ -9,7 +9,7 @@ import {environment} from '@environments/environment';
 })
 export class ProjectsService {
 
-    private projects: ProjectModel[] = [];
+    private projects: ProjectModel[] | null = [];
 
     private projectsObs = new BehaviorSubject<ProjectModel[]>([]);
 
@@ -31,7 +31,7 @@ export class ProjectsService {
         });
     }
 
-    getProjects(): ProjectModel[] {
+    getProjects(): ProjectModel[] | null {
         return this.projects;
     }
 }

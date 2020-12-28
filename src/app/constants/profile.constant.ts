@@ -6,6 +6,7 @@ export const PROFILE: ProfileModel = {
     lastName: '',
     name: '',
     socialMedia: [],
-    description: ''
+    description: '',
+    technologies: []
 };
 

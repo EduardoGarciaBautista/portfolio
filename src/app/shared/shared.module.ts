@@ -4,16 +4,18 @@ import { MenuComponent } from './components/menu/menu.component';
 import {RouterModule} from '@angular/router';
 import { SanitizePipe } from './pipes/sanitize.pipe';
 import { ModalComponent } from './components/modal/modal.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 
 @NgModule({
-    declarations: [MenuComponent, SanitizePipe, ModalComponent],
+    declarations: [MenuComponent, SanitizePipe, ModalComponent, LoaderComponent],
     exports: [
         MenuComponent,
         SanitizePipe,
         MenuComponent,
-        ModalComponent
+        ModalComponent,
+        LoaderComponent
     ],
     imports: [
         CommonModule,

@@ -32,7 +32,9 @@
         <div class="info-container-item social-media">
            <span>
                <span class="profile-link" *ngFor="let tech of profile.socialMedia">
-                   <a [ngClass]="tech.icon" [href]="tech.url" target="_blank"></a>
+                   <a [href]="tech.url" target="_blank">
+                       <i [ngClass]="tech.icon"></i>
+                   </a>
                </span>
            </span>
 

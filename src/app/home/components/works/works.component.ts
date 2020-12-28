@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {ProjectsService} from "@core/services/projects.service";
-import {ProjectModel} from "@models/project.model";
+import {ProjectsService} from '@core/services/projects.service';
+import {ProjectModel} from '@models/project.model';
 
 @Component({
     selector: 'app-works',
@@ -8,7 +8,7 @@ import {ProjectModel} from "@models/project.model";
 })
 export class WorksComponent implements OnInit {
 
-    projects: ProjectModel[] = [];
+    projects: ProjectModel[] | null = [];
 
     works = [
         {
@@ -37,7 +37,7 @@ export class WorksComponent implements OnInit {
     }
 
     getProjects(): void {
-        if (this.projectsService.getProjects().length) {
+        if (this.projectsService.getProjects()?.length) {
             this.projects = this.projectsService.getProjects();
         } else {
             this.loadingProjects = true;

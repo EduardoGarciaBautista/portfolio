@@ -24,6 +24,8 @@
 
 }
 
+
+
 .certifications-container > .item {
   border: 1px solid green;
   transition: 300ms;
@@ -39,19 +41,6 @@
 .certifications-container > .item:nth-child(2n) {
   // background-color: red;
 }
-
-@keyframes openDoor {
-  0% {
-    clip-path: polygon(0 44%, 35% 44%, 50% 54%, 100% 54%,
-            100% 55%, 50% 55%, 35% 45%, 0 45%);
-  }
-
-  100% {
-    clip-path: polygon(0 5%, 35% 5%, 50% 10%, 100% 10%,
-                       100% 95%, 50% 95%, 35% 90%, 0 90%);
-  }
-}
-
 
 @media only screen and (max-width: 640px) {
   .certifications-container {
