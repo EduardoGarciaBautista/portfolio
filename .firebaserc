@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portfolio-ed": {
+      "hosting": {
+        "portfolio": [
+          "portfolio-ed"
+        ]
+      }
+    }
+  }
+}

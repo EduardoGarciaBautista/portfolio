@@ -1,0 +1,60 @@
+.wrapper {
+  background: radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+  .certifications-container {
+    animation: openDoor 2s 200ms forwards;
+  }
+}
+
+.certifications-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-size: 20px 20px;
+  background-color: black;
+  height: calc(100vh - 50px);
+  clip-path: polygon(0 44%, 35% 44%, 50% 54%, 100% 54%,
+          100% 55%, 50% 55%, 35% 45%, 0 45%);
+  gap: 10px;
+  overflow: auto;
+
+}
+
+.certifications-container > .item {
+  border: 1px solid green;
+  transition: 300ms;
+  animation: fadeIn 300ms linear;
+}
+
+.certifications-container > .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.certifications-container > .item:nth-child(2n) {
+  // background-color: red;
+}
+
+@keyframes openDoor {
+  0% {
+    clip-path: polygon(0 44%, 35% 44%, 50% 54%, 100% 54%,
+            100% 55%, 50% 55%, 35% 45%, 0 45%);
+  }
+
+  100% {
+    clip-path: polygon(0 5%, 35% 5%, 50% 10%, 100% 10%,
+                       100% 95%, 50% 95%, 35% 90%, 0 90%);
+  }
+}
+
+
+@media only screen and (max-width: 640px) {
+  .certifications-container {
+    grid-template-columns: 1fr;
+  }
+}

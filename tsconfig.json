@@ -22,7 +22,11 @@
     ],
     "paths": {
       "@icons/*": ["src/assets/*"],
-      "@shared/*": ["src/app/shared/*"]
+      "@shared/*": ["src/app/shared/*"],
+      "@models/*": ["src/app/models/*"],
+      "@core/*": ["src/app/core/*"],
+      "@environments/*": ["src/environments/*"],
+      "@constants/*": ["src/app/constants/*"]
     }
   },
   "angularCompilerOptions": {

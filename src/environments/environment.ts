@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    firebaseConfig: {
+    },
+    PROFILE_COLLECTION: 'profile',
+    PROJECTS_COLLECTION: 'projects',
+    CERTIFICATIONS_COLLECTION: 'courses'
 };
 
 /*

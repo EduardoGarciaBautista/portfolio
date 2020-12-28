@@ -128,6 +128,8 @@
 }
 
 .know-me button {
+  position: relative;
+  @include flex-center();
   height: 45px;
   background-color: #3fc5f0;
   width: 250px;
@@ -137,6 +139,7 @@
   color: white;
   font-weight: 500;
   outline: none;
+  cursor: pointer;
 }
 
 .social-media {
@@ -149,9 +152,8 @@
   @include flex-center();
 }
 
-#linkedin, #github {
-  width: 30px;
-  height: 30px;
+.profile-link {
+  font-size: 30px;
   cursor: pointer;
   margin: 4px;
 }
@@ -160,6 +162,14 @@
   color: white;
 }
 
+
+.description {
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
+  padding: 20px;
+  text-align: justify;
+}
 
 /* escritorio normales */
 @media (max-width: 992px) {
