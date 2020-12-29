@@ -6,7 +6,7 @@
   background-color: #282828;
   background-size: 16px 16px;
   .certifications-container {
-    animation: openDoor 2s 200ms forwards;
+    animation: openDoor 2s forwards;
   }
 }
 
@@ -27,10 +27,11 @@
 
 
 .certifications-container > .item {
-  border: 1px solid green;
+  border: 1px solid white;
   transition: 300ms;
   animation: fadeIn 300ms linear;
   min-height: 265px;
+
 }
 
 .certifications-container > .item img {

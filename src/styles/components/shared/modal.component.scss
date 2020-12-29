@@ -1,5 +1,5 @@
 .modal-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -11,12 +11,13 @@
 }
 
 .modal {
-  width: 50%;
+  width: 70%;
   height: auto;
   @include flex-center($column);
   background-color: white;
   border-radius: 10px;
   box-sizing: border-box;
+
 }
 
 .modal-header {
@@ -46,6 +47,9 @@
 .modal-content {
   width: 100%;
   color: black;
+  height: calc(90% - 70px);
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 @media only screen and (max-width: 640px) {

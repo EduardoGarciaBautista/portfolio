@@ -4,92 +4,58 @@
   flex-flow: row-reverse;
   align-items: center;
   padding: 0 2%;
-  transition: 300ms;
+  background-image: linear-gradient(to right bottom, #fa7d09, #ff4301);
+  transition: 1s;
 }
-
-.menu__actions {
-  transform: translateX(500px);
-  animation: menuAnimationNormal 300ms 1s forwards;
-}
-
-.close-button {
-  opacity: 0;
-}
-
-.menu__button {
-  font-size: 20px;
-  margin-right: 20px;
-  cursor: pointer;
-  color: #ff4301;
-}
-
-
 
 .menu-container button {
-  background-color: transparent;
-  font-size: 15px;
-  font-weight: bold;
+  transition: 300ms ease;
+  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 0;
+  height: 40px;
   border: 0;
-  color: white;
-  padding: 0 10px;
+  border-radius: 40px;
+  font-size: 16px;
   cursor: pointer;
+  color: orange;
+  @include flex-center();
+  background-image: linear-gradient(to right bottom, #ff4301, #fa7d09);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.4);
   outline: none;
+  animation: animateUnactivatedMenu 300ms forwards;
   i {
-    font-size: 25px;
-    color: #ffa400;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #db6400;
+    color: #2f2519;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   }
-}
-.animate-menu {
+  label {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2f2519!important;
+  }
+
 }
 
 
 @media only screen and (max-width: 640px) {
 
-  .close-button {
-    opacity: 1;
-    right: 7%;
-    top: 2%;
-    position: absolute;
-    font-size: 30px;
-    color: #ff4301;
-    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
-    -webkit-box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
+  .menu-container {
+    justify-content: center;
   }
-  .open-menu-animation, .menu__actions {
+
+  .menu__actions {
     animation: unset;
-    opacity: 0;
-  }
-  .menu__actions.open-menu-animation {
-    transform: translateX(0px);
-    z-index: 100;
-
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
-    background-color: #282828;
-    background-size: 16px 16px;
-
-    width: 100%;
-    opacity: 1;
-    padding-top: 30px;
-
-    button {
-      position: relative;
-      display: block;
-      margin: 15px 0;
-      width: 100%;
-      padding-bottom: 5px;
-      border-bottom: 2px solid #555555;
-      border-bottom-left-radius: 20%;
-      border-bottom-right-radius: 20%;
-    }
+    transform: unset;
   }
 }

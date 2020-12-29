@@ -1,14 +1,12 @@
 <div class="menu-container">
-    <i class="fas fa-bars menu__button" (click)="isMenuOpen = !isMenuOpen"></i>
-    <div class="menu__actions" [ngClass]="{'open-menu-animation': isMenuOpen}">
-        <i class="far fa-times-circle close-button" (click)="isMenuOpen = !isMenuOpen"></i>
-        <button routerLink="/">
-            <i class="fas fa-home blog"></i>
+    <button routerLink="/certifications" routerLinkActive="active">
+        <i class="fas fa-graduation-cap"></i>
+        <label>Certifications</label>
+    </button>
+    <button routerLink="/presentation" routerLinkActive="active">
+        <i class="fas fa-home"></i>
+        <label>
             Home
-        </button>
-        <button routerLink="/certifications">
-            <i class="fas fa-graduation-cap certification animate-menu"></i>
-            Certifications
-        </button>
-    </div>
+        </label>
+    </button>
 </div>

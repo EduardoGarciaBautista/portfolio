@@ -54,6 +54,7 @@
   top: calc(50% - 15px);
   bottom: calc(50% - 15px);
   cursor: pointer;
+
   span {
     transition: 300ms;
     display: none;
@@ -61,7 +62,8 @@
   }
 
   &:hover {
-    z-index: 100!important;
+    z-index: 100 !important;
+
     span {
       display: initial;
       margin: 0;
@@ -158,6 +160,7 @@
   cursor: pointer;
   margin: 4px;
   color: white;
+
   a {
     color: white;
   }
@@ -191,6 +194,15 @@
 
 @media only screen and (max-width: 768px) {
 
+
+  .description {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    padding: 20px;
+    text-align: justify;
+  }
+
   .photo img {
     height: 150px;
     width: 150px;
@@ -219,6 +231,7 @@
 
 
 @media only screen and (max-width: 640px) {
+
   .photo-shadow {
     display: none;
   }

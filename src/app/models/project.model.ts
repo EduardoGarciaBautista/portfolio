@@ -11,4 +11,6 @@ export interface ProjectModel {
     url: string;
     media: MediaModel[];
     description: string;
+    isPublic: boolean;
+    gitUrl: string;
 }
