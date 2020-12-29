@@ -1,0 +1,31 @@
+<div class="detail-container">
+    <ng-container *ngIf="project">
+        <div class="detail-header" [style]="{'background-color': 'black'}">
+            <div class="header-title">
+                <span>
+                    {{project.projectName}}
+                </span>
+            </div>
+            <div class="header-links">
+                <p>
+                    <i class="fab fa-github"></i> Repository
+                </p>
+                <p>
+                    <a [href]="project.url" target="_blank"><i class="fas fa-external-link-alt"></i> Visit</a>
+                </p>
+            </div>
+            <div class="header-description">
+                <p>
+                    {{project.description}}
+                </p>
+            </div>
+        </div>
+        <div class="detail-project">
+
+            <div class="detail-item" *ngFor="let projectImg of project.media" [ngClass]="projectImg.class">
+                <img class="image-project" [src]="projectImg.url" alt="project image">
+            </div>
+
+        </div>
+    </ng-container>
+</div>

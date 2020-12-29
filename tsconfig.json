@@ -26,7 +26,8 @@
       "@models/*": ["src/app/models/*"],
       "@core/*": ["src/app/core/*"],
       "@environments/*": ["src/environments/*"],
-      "@constants/*": ["src/app/constants/*"]
+      "@constants/*": ["src/app/constants/*"],
+      "@projects/*": ["src/app/projects/*"]
     }
   },
   "angularCompilerOptions": {

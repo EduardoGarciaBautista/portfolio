@@ -14,7 +14,7 @@
                 </span>
             </div>
             <a class="card-content__url" *ngIf="card.url" [href]="card.url" target="_blank">Url website</a>
-            <button class="card-content__know">
+            <button class="card-content__know" [routerLink]="['/detail/', card.id]">
                 Know more
             </button>
         </div>

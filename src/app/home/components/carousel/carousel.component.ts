@@ -9,7 +9,7 @@ import {ProjectModel} from '@models/project.model';
 export class CarouselComponent implements OnInit {
 
 
-    @Input() cards: ProjectModel[] = [];
+    @Input() cards: ProjectModel[] | null = [];
 
     constructor() {
     }

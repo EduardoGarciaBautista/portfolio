@@ -34,4 +34,11 @@ export class ProjectsService {
     getProjects(): ProjectModel[] | null {
         return this.projects;
     }
+
+    getProjectById(projectId: string): ProjectModel | undefined {
+        if (this.projects) {
+            return this.projects.find(({id}) => id === projectId);
+        }
+        return undefined;
+    }
 }

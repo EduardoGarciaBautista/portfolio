@@ -10,7 +10,19 @@
 
 .side-left {
   grid-area: left;
+  @include flex();
 }
+
+
+.text-portfolio {
+  height: 100%;
+  width: 100%;
+  color: white;
+  span {
+    transform: rotateY(45deg);
+  }
+}
+
 
 .menu {
   grid-area: menu;

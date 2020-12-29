@@ -3,7 +3,7 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
-$banner: 'https://firebasestorage.googleapis.com/v0/b/portfolio-ed.appspot.com/o/images%2Fbanner2.jpg?alt=media&token=af028443-36cc-4153-a387-cfa9f598f799';
+$banner: 'https://firebasestorage.googleapis.com/v0/b/portfolio-ed.appspot.com/o/images%2Fbanner.jpg?alt=media&token=a1b9e596-3f7c-4734-904f-415866790602';
 
 $column: 'column';
 $row: 'row';
@@ -124,7 +124,7 @@ $end: 'end';
 
 @keyframes openDoor {
   0% {
-    clip-path: polygon(0 44%, 35% 44%, 50% 54%, 100% 54%,
+    clip-path: polygon(0 44.8%, 35% 44.8%, 50% 54.8%, 100% 54.8%,
             100% 55%, 50% 55%, 35% 45%, 0 45%);
   }
 

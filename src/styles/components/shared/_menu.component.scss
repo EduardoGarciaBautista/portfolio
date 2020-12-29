@@ -27,25 +27,19 @@
 
 .menu-container button {
   background-color: transparent;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   border: 0;
   color: white;
   padding: 0 10px;
   cursor: pointer;
   outline: none;
+  i {
+    font-size: 25px;
+    color: #ffa400;
+  }
 }
-
-.blog {
-  color: #f37121;
-}
-
-.contact {
-  color: #999b84;
-}
-
-.certification {
-  color: #e6b566;
+.animate-menu {
 }
 
 
