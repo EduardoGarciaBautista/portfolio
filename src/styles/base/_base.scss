@@ -22,7 +22,7 @@ $end: 'end';
 @mixin flex-top($direction: $row) {
   @include flex($direction);
   @if ($direction == $row) {
-    align-items: start;
+    align-items: flex-start;
   } @else {
     justify-content: flex-start;
   }
@@ -44,7 +44,7 @@ $end: 'end';
   @if ($direction == $row) {
     justify-content: flex-start;
   } @else {
-    align-items: start;
+    align-items: flex-start;
   }
 }
 

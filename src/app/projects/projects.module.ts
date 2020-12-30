@@ -4,7 +4,6 @@ import {CommonModule} from '@angular/common';
 import {ProjectsRoutingModule} from './projects-routing.module';
 import {DetailComponent} from './components/detail/detail.component';
 
-import {LazyLoadImageModule} from 'ng-lazyload-image';
 
 
 @NgModule({
@@ -12,7 +11,6 @@ import {LazyLoadImageModule} from 'ng-lazyload-image';
   imports: [
     CommonModule,
     ProjectsRoutingModule,
-    LazyLoadImageModule
   ]
 })
 export class ProjectsModule {

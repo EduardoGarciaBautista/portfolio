@@ -147,7 +147,7 @@
 .social-media {
   grid-area: social-media;
   @include flex-start();
-  align-items: start;
+  align-items: flex-start;
 }
 
 .social-media span {

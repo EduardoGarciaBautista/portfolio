@@ -34,8 +34,7 @@
         <div class="detail-project" [ngClass]="{'larger-layout': project.media.length > 5}" *ngIf="project">
 
             <div class="detail-item" *ngFor="let projectImg of project.media" [ngClass]="projectImg.class">
-                <img class="image-project" [src]="projectImg.url" alt="project image" [lazyLoad]="projectImg.url"
-                     [useSrcset]="true">
+                <img class="image-project" [src]="projectImg.url" alt="project image">
             </div>
 
         </div>
