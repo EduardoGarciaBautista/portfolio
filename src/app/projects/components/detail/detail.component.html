@@ -31,10 +31,11 @@
                 </p>
             </div>
         </div>
-        <div class="detail-project" [ngClass]="{'larger-layout': project.media.length > 5}">
+        <div class="detail-project" [ngClass]="{'larger-layout': project.media.length > 5}" *ngIf="project">
 
             <div class="detail-item" *ngFor="let projectImg of project.media" [ngClass]="projectImg.class">
-                <img class="image-project" [src]="projectImg.url" alt="project image">
+                <img class="image-project" [src]="projectImg.url" alt="project image" [lazyLoad]="projectImg.url"
+                     [useSrcset]="true">
             </div>
 
         </div>

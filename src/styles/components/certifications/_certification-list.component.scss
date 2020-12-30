@@ -5,6 +5,7 @@
   radial-gradient(rgba(255, 255, 255, .1) 15%, transparent 20%) 8px 9px;
   background-color: #282828;
   background-size: 16px 16px;
+
   .certifications-container {
     animation: openDoor 2s forwards;
   }
@@ -24,6 +25,15 @@
 
 }
 
+.certifications-container > .item {
+  opacity: 0;
+}
+
+@for $i from 0 through 20 {
+  .certifications-container > .item:nth-child(#{$i}) {
+    animation: fadeIn 300ms #{.5 * $i}s linear forwards;
+  }
+}
 
 
 .certifications-container > .item {
