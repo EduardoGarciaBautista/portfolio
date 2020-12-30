@@ -12,9 +12,7 @@ export class PresentationComponent implements OnInit {
 
     profile: ProfileModel | null = null;
 
-
     loadingProfile = false;
-
 
     constructor(private profileService: ProfileService) {
 

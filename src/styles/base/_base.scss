@@ -149,7 +149,7 @@ $end: 'end';
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -186,7 +186,7 @@ $end: 'end';
       border-top: 2px solid transparent;
       border-bottom: 2px solid transparent;
       border-radius: 50%;
-      animation: rotateInfinite 1s linear infinite;
+      animation: rotateInfinite 500ms linear;
     }
   }
 

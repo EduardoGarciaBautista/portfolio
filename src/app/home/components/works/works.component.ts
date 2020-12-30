@@ -17,11 +17,11 @@ export class WorksComponent implements OnInit {
             border: true
         },
         {
-            label: 'in',
+            label: 'in my free time',
             color: 'black'
         },
         {
-            label: 'some professional and personal projects.',
+            label: 'some projects.',
             color: 'black',
             border: true
         }

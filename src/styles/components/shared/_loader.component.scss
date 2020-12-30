@@ -24,7 +24,7 @@
   clip-path: polygon(0 44.8%, 35% 44.8%, 50% 54.8%, 100% 54.8%,
           100% 55%, 50% 55%, 35% 45%, 0 45%);
   width: 100%;
-  height: 100%;
+  height:100vh;
   overflow: auto;
 }
 
@@ -33,6 +33,7 @@
   animation: openDoor 800ms linear forwards;
   .loading-animated {
     display: none;
+    animation: unset;
   }
 }
 
