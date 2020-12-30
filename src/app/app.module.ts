@@ -7,7 +7,7 @@ import {LayoutComponent} from './layout/layout.component';
 import {SharedModule} from '@shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import {AngularFireModule} from '@angular/fire';
-import {environment} from '../environments/environment';
+import {environment} from '@environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 @NgModule({

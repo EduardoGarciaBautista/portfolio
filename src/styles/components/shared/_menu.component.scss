@@ -4,8 +4,10 @@
   flex-flow: row-reverse;
   align-items: center;
   padding: 0 2%;
-  background-image: linear-gradient(to right bottom, #fa7d09, #ff4301);
+  background-image: linear-gradient(to right bottom, #F2F2F2, #ADA996);
   transition: 1s;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .menu-container button {
@@ -20,10 +22,11 @@
   cursor: pointer;
   color: orange;
   @include flex-center();
-  background-image: linear-gradient(to right bottom, #ff4301, #fa7d09);
+  background-image: linear-gradient(to right bottom, #F2F2F2, #F2F2F2);
   box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.4);
   outline: none;
   animation: animateUnactivatedMenu 300ms forwards;
+
   i {
     margin-right: 10px;
     border-radius: 50%;
@@ -39,10 +42,11 @@
     -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
   }
+
   label {
     cursor: pointer;
     font-weight: bold;
-    color: #2f2519!important;
+    color: #2f2519 !important;
   }
 
 }
@@ -50,6 +54,16 @@
 
 @media only screen and (max-width: 640px) {
 
+  .menu-container button {
+    height: 30px;
+
+    i {
+      height: 30px;
+      width: 30px;
+    }
+
+
+  }
   .menu-container {
     justify-content: center;
   }

@@ -23,7 +23,6 @@
   cursor: pointer;
   position: relative;
   border: 1px solid #3fc5f0;
-
   display: flex;
   flex-direction: column;
 
@@ -34,6 +33,7 @@
     transform: scale(1.1);
   }
 }
+
 
 .card-cover-page {
   width: 100%;
@@ -56,6 +56,30 @@
   left: 0;
   right: 0;
   margin: auto;
+}
+.code-icon {
+  background-color: white;
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  border: 2px solid gray;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  @include flex-center();
+  i {
+    @include flex-center();
+    color: #1d1d1d;
+    font-size: 30px;
+    height: 40px;
+    width: 40px;
+  }
 }
 
 .card-content {

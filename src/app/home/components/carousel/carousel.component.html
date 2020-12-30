@@ -1,8 +1,12 @@
 <div class="carousel-container">
-    <div class="carousel-card" *ngFor="let card of cards">
+    <div class="carousel-card" *ngFor="let card of cards" [routerLink]="['/detail/', card.id]">
         <div class="card-cover-page" [style]="{'background-color': card.headerColor}">
         </div>
-        <img [src]="card.img" alt="logo">
+        <img [src]="card.img" *ngIf="card.img" alt="logo">
+        <div class="code-icon">
+            <i class="fas fa-code" *ngIf="!card.img"></i>
+        </div>
+
         <div class="card-content">
             <span class="card-content__project">
                 {{card.projectName}}

@@ -20,12 +20,14 @@ export class DetailComponent implements OnInit {
 
     ngOnInit(): void {
 
+
         this.project = this.projectService.getProjectById(this.projectId);
         if (!this.project) {
             this.projectService.projects$.subscribe(data => {
                 this.project = this.projectService.getProjectById(this.projectId);
             });
         }
+        window.scrollTo({top: 0});
     }
 
 }

@@ -26,7 +26,7 @@ export class ProjectsService {
             data.docs.forEach(item => {
                 result.push(item.data() as ProjectModel);
             });
-            this.projects = result;
+            this.projects = result.reverse();
             this.projectsObs.next(this.projects);
         });
     }

@@ -5,6 +5,7 @@
 export const environment = {
     production: false,
     firebaseConfig: {
+
     },
     PROFILE_COLLECTION: 'profile',
     PROJECTS_COLLECTION: 'projects',
