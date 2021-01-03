@@ -1,6 +1,5 @@
 .carousel-container {
   @include flex-center();
-  min-height: 300px;
   box-sizing: content-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -10,7 +9,7 @@
 
 
 .carousel-card {
-  height: 300px;
+  min-height: 300px;
   margin-right: 20px;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -83,7 +82,7 @@
 }
 
 .card-content {
-  height: 230px;
+  height: auto;
   padding: 30px 20px 0 20px;
   border-top: 2px solid gray;
   box-sizing: border-box;
@@ -93,6 +92,7 @@
 }
 
 .card-content__project {
+  text-align: center;
   color: black;
   font-size: 25px;
   font-weight: bold;
