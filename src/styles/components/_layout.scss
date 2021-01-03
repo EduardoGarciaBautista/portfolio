@@ -15,13 +15,35 @@
   @include flex();
 }
 
+.side-right, .text-portfolio {
+  width: 100%;
+  height: 100vh;
+  @include flex();
+  justify-content: center;
+  color: white;
+  position: relative;
+
+}
 
 .text-portfolio {
-  height: 100%;
-  width: 100%;
-  color: white;
-  span {
-    transform: rotateY(45deg);
+  box-sizing: border-box;
+
+  svg {
+    @include flex-center();
+    transform: rotate(-90deg);
+    position: absolute;
+    font-size: 120px;
+    height: 100px;
+    width: 600px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    stroke-width: 2px;
+    stroke: #ffd66b;
+    fill: none;
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    animation: animateWelcome 2s 3s forwards;
   }
 }
 
@@ -33,6 +55,23 @@
 
 .side-right {
   grid-area: right;
+  svg {
+    @include flex-center();
+    transform: rotate(-90deg);
+    position: absolute;
+    font-size: 120px;
+    height: 100px;
+    width: 750px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
+    animation: animateWelcome 2s 4s forwards;
+  }
 }
 
 .layout-content {
@@ -52,6 +91,12 @@
     grid-template-areas:
   "menu"
   "layout-content";
+  }
+}
+
+@keyframes animateWelcome {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
