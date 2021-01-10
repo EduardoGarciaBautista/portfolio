@@ -9,6 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '@environments/environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
     declarations: [
@@ -21,9 +23,12 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
         SharedModule,
         HttpClientModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
-        AngularFirestoreModule
+        AngularFirestoreModule,
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
-    providers: [],
+    providers: [
+        {provide: LocationStrategy, useClass: HashLocationStrategy}
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

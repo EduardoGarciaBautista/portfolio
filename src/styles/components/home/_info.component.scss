@@ -227,6 +227,14 @@
   .name span:last-child {
     font-size: 30px;
   }
+  .feat {
+    width: 160px;
+    height: 160px;
+
+    &:hover {
+      @include generateCircles(7, 160);
+    }
+  }
 }
 
 
@@ -241,14 +249,6 @@
   }
   .name, .secondary-info, .know-me, .social-media {
     @include flex-center()
-  }
-  .feat {
-    width: 160px;
-    height: 160px;
-
-    &:hover {
-      @include generateCircles(7, 160);
-    }
   }
 
   .info-container {

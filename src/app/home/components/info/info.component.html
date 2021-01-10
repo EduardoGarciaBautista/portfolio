@@ -3,7 +3,7 @@
         <div class="info-container-item photo">
 
             <div class="feat">
-                <img id="image" [src]="profile.image" alt="user image">
+                <img id="image" [src]="profile.image" alt="user image" *ngIf="profile.image" appLazyImage>
                 <div class="profile-technology" *ngFor="let tech of profile.technologies" [ngStyle]="{'background-color': tech.color}">
                     <span>{{tech.title}}</span>
                     <i [ngClass]="tech.icon"></i>

@@ -5,17 +5,21 @@ import {RouterModule} from '@angular/router';
 import { SanitizePipe } from './pipes/sanitize.pipe';
 import { ModalComponent } from './components/modal/modal.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { LazyImageDirective } from './directives/lazy-image.directive';
+
+
 
 
 
 @NgModule({
-    declarations: [MenuComponent, SanitizePipe, ModalComponent, LoaderComponent],
+    declarations: [MenuComponent, SanitizePipe, ModalComponent, LoaderComponent, LazyImageDirective],
     exports: [
         MenuComponent,
         SanitizePipe,
         MenuComponent,
         ModalComponent,
-        LoaderComponent
+        LoaderComponent,
+        LazyImageDirective
     ],
     imports: [
         CommonModule,

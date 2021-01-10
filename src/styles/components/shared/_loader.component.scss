@@ -17,10 +17,12 @@
   width: 100vw;
   z-index: 100;
   overflow: auto;
+  will-change: clip-path;
 }
 
 .loader-container {
 
+  will-change: clip-path;
   clip-path: polygon(0 44.8%, 35% 44.8%, 50% 54.8%, 100% 54.8%,
           100% 55%, 50% 55%, 35% 45%, 0 45%);
   width: 100%;
