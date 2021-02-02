@@ -1,12 +1,18 @@
 <div class="menu-container">
-    <button routerLink="/certifications" routerLinkActive="active">
-        <i class="fas fa-graduation-cap"></i>
-        <label>Certifications</label>
-    </button>
-    <button routerLink="/presentation" routerLinkActive="active">
-        <i class="fas fa-home"></i>
-        <label>
-            Home
-        </label>
-    </button>
+    <div class="menu-container__button" routerLinkActive="active" routerLink="/certifications">
+        <div class="shape">
+            <label>Certifications</label>
+        </div>
+        <div class="circle">
+            <i class="fas fa-user-graduate"></i>
+        </div>
+    </div>
+    <div class="menu-container__button" routerLinkActive="active" routerLink="/presentation">
+        <div class="shape">
+            <label>Home</label>
+        </div>
+        <div class="circle">
+            <i class="fas fa-home"></i>
+        </div>
+    </div>
 </div>

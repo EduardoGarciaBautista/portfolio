@@ -1,0 +1,30 @@
+.my-cv {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: #ec9b3b;
+
+  @include flex();
+  align-items: center;
+  justify-content: center;
+}
+
+.left, .right {
+  width: 30%;
+  height: 30%;
+  border: 2px solid white;
+}
+
+.left {
+  background-color: #111d5e;
+  transform-style: preserve-3d;
+  transform: perspective(200px) rotate3d(0, 1, 0, 45deg) translateZ(-45px);
+}

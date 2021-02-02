@@ -31,7 +31,7 @@
 
 @for $i from 0 through 20 {
   .certifications-container > .item:nth-child(#{$i}) {
-    animation: fadeIn 300ms #{.5 * $i}s linear forwards;
+    animation: fadeIn 300ms #{.2 * $i}s linear forwards;
   }
 }
 

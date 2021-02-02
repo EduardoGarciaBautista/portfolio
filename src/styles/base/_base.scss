@@ -168,32 +168,6 @@ $end: 'end';
   pointer-events: none;
 }
 
-.active {
-  @include flex-center();
-  padding-right: 0 !important;
-  animation: animateActiveMenu 1s ease forwards;
-
-  position: relative;
-  i {
-    margin-right: 0 !important;
-    &:after {
-      position: absolute;
-      content: '';
-      height: 85%;
-      width: 85%;
-      border-left: 2px solid cyan;
-      border-right: 2px solid cyan;
-      border-top: 2px solid transparent;
-      border-bottom: 2px solid transparent;
-      border-radius: 50%;
-      animation: rotateInfinite 500ms linear;
-    }
-  }
-
-  label {
-    display: none;
-  }
-}
 
 @keyframes animateActiveMenu {
 
