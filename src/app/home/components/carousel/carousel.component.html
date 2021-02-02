@@ -2,7 +2,7 @@
     <div class="carousel-card" *ngFor="let card of cards" [routerLink]="['/detail/', card.id]">
         <div class="card-cover-page" [style]="{'background-color': card.headerColor}">
         </div>
-        <img [src]="card.img" *ngIf="card.img" alt="logo" appLazyImage>
+        <img [src]="card.img" width="0" height="0" *ngIf="card.img" alt="logo" appLazyImage>
         <div class="code-icon">
             <i class="fas fa-code" *ngIf="!card.img"></i>
         </div>
