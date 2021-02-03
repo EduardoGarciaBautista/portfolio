@@ -8,7 +8,7 @@
             </div>
             <div class="header-links">
                 <p>
-                    <a [href]="project.gitUrl" target="_blank" [class.disabled]="!project.isPublic">
+                    <a [href]="project.gitUrl" rel="noreferrer" name="go to repository" target="_blank" [class.disabled]="!project.isPublic">
                         <i class="fab fa-github"></i> Repository
                     </a>
                     <label class="private-repo" *ngIf="!project.isPublic">
@@ -22,7 +22,8 @@
                 </p>
 
                 <p>
-                    <a [href]="project.url" target="_blank"><i class="fas fa-external-link-alt"></i> Visit</a>
+                    <a [href]="project.url" rel="noreferrer" name="go to web page" target="_blank"><i class="fas fa-external-link-alt"></i> Visit
+                    </a>
                 </p>
             </div>
             <div class="header-description">

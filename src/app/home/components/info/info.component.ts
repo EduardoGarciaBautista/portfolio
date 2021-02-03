@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {ProfileModel} from '@models/profile.model';
+import {PROFILE} from '@constants/profile.constant';
 
 @Component({
     selector: 'app-info',
@@ -8,7 +9,7 @@ import {ProfileModel} from '@models/profile.model';
 })
 export class InfoComponent implements OnInit {
 
-    @Input() profile: ProfileModel | null = null;
+    @Input() profile: ProfileModel = PROFILE;
 
     avatar = '';
 

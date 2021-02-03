@@ -1,48 +1,49 @@
-<div class="info-container">
-    <ng-container *ngIf="profile">
-        <div class="info-container-item photo">
+<div class="info-container" *ngIf="profile.name">
+    <div class="info-container-item photo">
 
-            <div class="feat">
-                <img id="image"  width="0" height="0" [src]="profile.image" alt="user image" *ngIf="profile.image" appLazyImage>
-                <div class="profile-technology" *ngFor="let tech of profile.technologies" [ngStyle]="{'background-color': tech.color}">
-                    <span>{{tech.title}}</span>
-                    <i [ngClass]="tech.icon"></i>
-                </div>
-            </div>
-            <div class="photo-shadow">
+        <div class="feat">
+            <img id="image" class="feat__image" width="200" height="200" [src]="profile.image" alt="user image"
+                 appLazyImage>
+            <div class="profile-technology" *ngFor="let tech of profile.technologies"
+                 [ngStyle]="{'background-color': tech.color}">
+                <span>{{tech.title}}</span>
+                <i [ngClass]="tech.icon"></i>
             </div>
         </div>
 
-        <div class="info-container-item name">
-            <span>Hi, i am</span>
-            <span>{{profile.name + ' ' + profile.lastName}}</span>
+        <div class="photo-shadow">
         </div>
-        <div class="info-container-item secondary-info">
+    </div>
+
+    <div class="info-container-item name">
+        <span>Hi, i am</span>
+        <span>{{profile.name + ' ' + profile.lastName}}</span>
+    </div>
+    <div class="info-container-item secondary-info">
             <span>
                 {{profile.job}}
             </span>
-        </div>
+    </div>
 
-        <div class="info-container-item know-me">
-            <button (click)="showModal = !showModal">
-                Know More
-            </button>
-        </div>
+    <div class="info-container-item know-me">
+        <button (click)="showModal = !showModal">
+            Know More
+        </button>
+    </div>
 
-        <div class="info-container-item social-media">
+    <div class="info-container-item social-media">
            <span>
                <span class="profile-link" *ngFor="let tech of profile.socialMedia">
-                   <a [href]="tech.url" target="_blank">
+                   <a [href]="tech.url" rel="noreferrer" target="_blank" name="tech name">
                        <i [ngClass]="tech.icon"></i>
                    </a>
                </span>
            </span>
 
-        </div>
-        <app-modal [title]="'About me'" (closed)="getEvent($event)" *ngIf="showModal">
-            <p class="description" *ngIf="profile">
-                {{profile.description}}
-            </p>
-        </app-modal>
-    </ng-container>
+    </div>
+    <app-modal [title]="'About me'" (closed)="getEvent($event)" *ngIf="showModal">
+        <p class="description" *ngIf="profile">
+            {{profile.description}}
+        </p>
+    </app-modal>
 </div>

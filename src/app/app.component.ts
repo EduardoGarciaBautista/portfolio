@@ -15,16 +15,12 @@ export class AppComponent {
                 private projectsService: ProjectsService) {
         this.profileService.profile$.subscribe(result => {
             if (result) {
-                setTimeout(() => {
-                    this.loadingProfile = false;
-                }, 2000);
+                this.loadingProfile = false;
             }
         });
         this.projectsService.projects$.subscribe(data => {
             if (data) {
-                setTimeout(() => {
-                    this.loadingProjects = false;
-                }, 2000);
+                this.loadingProjects = false;
             }
         });
     }

@@ -35,10 +35,14 @@
   width: 200px;
   height: 200px;
   transition: 1s;
-
   &:hover {
     @include generateCircles(7, 200);
   }
+  z-index: 2;
+}
+
+.feat__image {
+  animation: fadeIn 300ms;
 }
 
 .profile-technology {

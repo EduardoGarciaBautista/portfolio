@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 import {ProfileService} from '@core/services/profile.service';
 
 import {ProfileModel} from '@models/profile.model';
+import {PROFILE} from '@constants/profile.constant';
 
 @Component({
     selector: 'app-presentation',
@@ -10,7 +11,7 @@ import {ProfileModel} from '@models/profile.model';
 })
 export class PresentationComponent implements OnInit {
 
-    profile: ProfileModel | null = null;
+    profile: ProfileModel = PROFILE;
 
     loadingProfile = false;
 
@@ -23,8 +24,9 @@ export class PresentationComponent implements OnInit {
     }
 
     getProfile(): void {
-        if (this.profileService.getProfile()) {
-            this.profile = this.profileService.getProfile();
+        const profile = this.profileService.getProfile();
+        if (profile) {
+            this.profile = profile;
         } else {
             this.loadingProfile = true;
             this.profileService.profile$.subscribe(user => {
