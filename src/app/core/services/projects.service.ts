@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {AngularFirestore} from '@angular/fire/firestore';
+import {Firestore} from '@angular/fire/firestore';
 import {ProjectModel} from '@models/project.model';
 import {BehaviorSubject} from 'rxjs';
 import {environment} from '@environments/environment';
@@ -16,19 +16,19 @@ export class ProjectsService {
     projects$ = this.projectsObs.asObservable();
 
 
-    constructor(private afs: AngularFirestore) {
+    constructor(private afs: Firestore) {
         this.fetchProjects();
     }
 
     fetchProjects(): void {
-        this.afs.collection(environment.PROJECTS_COLLECTION).get().subscribe(data => {
-            const result: ProjectModel[] = [];
-            data.docs.forEach(item => {
-                result.push(item.data() as ProjectModel);
-            });
-            this.projects = result.reverse();
-            this.projectsObs.next(this.projects);
-        });
+        // this.afs.collection(environment.PROJECTS_COLLECTION).get().subscribe(data => {
+        //     const result: ProjectModel[] = [];
+        //     data.docs.forEach(item => {
+        //         result.push(item.data() as ProjectModel);
+        //     });
+        //     this.projects = result.reverse();
+        //     this.projectsObs.next(this.projects);
+        // });
     }
 
     getProjects(): ProjectModel[] | null {

@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {AngularFirestore} from '@angular/fire/firestore';
-import {environment} from '@environments/environment';
-import {BehaviorSubject} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { collection, collectionData, Firestore } from '@angular/fire/firestore';
+import { environment } from '@environments/environment';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -14,20 +14,25 @@ export class CertificationsService {
 
     certifications$ = this.behaviourOb.asObservable();
 
-    constructor(private afs: AngularFirestore) {
+    constructor(private afs: Firestore) {
         this.fetchCertifications();
     }
 
     fetchCertifications(): void {
-        this.afs.collection(environment.CERTIFICATIONS_COLLECTION).get().subscribe(data => {
-            data.docs.forEach(async doc => {
+        const col = collection(this.afs, environment.CERTIFICATIONS_COLLECTION);
+        const data = collectionData(col);
+        console.log(data);
 
-                const {coursesList} = await doc.data() as { coursesList: string[] };
 
-                this.certificationsList = coursesList;
-                this.behaviourOb.next(this.certificationsList);
-            });
-        });
+        // this.afs.collection(environment.CERTIFICATIONS_COLLECTION).get().subscribe(data => {
+        //     data.docs.forEach(async doc => {
+
+        //         const { coursesList } = await doc.data() as { coursesList: string[] };
+
+        //         this.certificationsList = coursesList;
+        //         this.behaviourOb.next(this.certificationsList);
+        //     });
+        // });
     }
 
     getCertifications(): string[] {
