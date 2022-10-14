@@ -5,12 +5,7 @@
 export const environment = {
     production: false,
     firebaseConfig: {
-        apiKey: 'AIzaSyB96ftMAobdipQT_rN5mDiUMU1N706kdMY',
-        authDomain: 'portfolio-ed.firebaseapp.com',
-        projectId: 'portfolio-ed',
-        storageBucket: 'portfolio-ed.appspot.com',
-        messagingSenderId: '661131878316',
-        appId: '1:661131878316:web:73e5f42a7082b66d312409'
+      
     },
     PROFILE_COLLECTION: 'profile',
     PROJECTS_COLLECTION: 'projects',
