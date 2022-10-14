@@ -3,7 +3,7 @@ import {environment} from '@environments/environment';
 import {ProfileModel} from '@models/profile.model';
 import {PROFILE} from '@constants/profile.constant';
 import {BehaviorSubject} from 'rxjs';
-import { Firestore } from '@angular/fire/firestore';
+import {collection, collectionData, Firestore} from '@angular/fire/firestore';
 
 @Injectable({
     providedIn: 'root'
@@ -23,13 +23,12 @@ export class ProfileService {
     fetchProfile(): Promise<ProfileModel> {
         return new Promise((resolve, reject) => {
             try {
-                // this.afs.collection(environment.PROFILE_COLLECTION).get().subscribe(data => {
-                //     data.docs.forEach(doc => {
-
-                //         this.profileUser = doc.data() as ProfileModel;
-                //         this.profile.next(this.profileUser);
-                //     });
-                // });
+                const col = collection(this.afs, environment.PROFILE_COLLECTION);
+                collectionData(col).subscribe(data => {
+                    const profile = data[0] as ProfileModel;
+                    this.profileUser = profile;
+                    this.profile.next(profile);
+                });
             } catch (e) {
                 reject(null);
             }

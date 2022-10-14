@@ -1,6 +1,3 @@
-SCSS SYNTAX
-@use "sass:math";
-
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -74,13 +71,13 @@ $end: 'end';
 
 
 @mixin generateCircles($items, $radius) {
-  $move: math.div(360, $items);
+  $move: 360 /$items;
 
   $accumulatorX: $move;
 
   @for $i from 0 through $items {
     .profile-technology:nth-of-type(#{$i}) {
-      transform: rotate(#{$accumulatorX}deg) translateX(#{math.div($radius, 2)}px) rotate(#{-$accumulatorX}deg);
+      transform: rotate(#{$accumulatorX}deg) translateX(#{$radius/2}px) rotate(#{-$accumulatorX}deg);
       opacity: 1;
       z-index: 100;
     }
